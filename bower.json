@@ -1,0 +1,16 @@
+{
+  "name": "myscript-slim",
+  "version": "0.0.0",
+  "homepage": "https://github.com/prideloki/MyScriptJS-Slim",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "myscript": "~1.0.13"
+  }
+}
