@@ -4,6 +4,8 @@ var draw2Text = function (canvasId, resultId) {
     this.resultId = resultId;
     var canvas = document.getElementById(this.canvasId);
     var result = document.getElementById(this.resultId);
+    var trash = document.getElementById('reset');
+
     var applicationKey = config.applicationKey;
     var hmacKey = config.hmacKey;
 
@@ -84,6 +86,12 @@ var draw2Text = function (canvasId, resultId) {
             doRecognition();
         }
     }, false);
+
+    trash.addEventListener('click',function(){
+        instanceId = undefined;
+        textRenderer.clear(context);
+        stroker.clear();
+    },false);
 
     function doRecognition() {
         if (stroker.isEmpty()) {
