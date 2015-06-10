@@ -1,0 +1,29 @@
+{% extends 'master.twig' %}
+{% block header %}
+    Home
+{% endblock header %}
+{% block content %}
+
+    <div class="col-md-12">
+        <a href="{{ siteUrl('/add') }}" class="btn btn-primary">Add Employee</a>
+    </div>
+
+    <div class="col-md-12">
+        <br />
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr
+                {% for employee in employees %}
+                    <tr>
+                        <td>{{ employee.id }}</td>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.age }}</td>
+                    </tr>
+                {% endfor %}
+
+        </table>
+    </div>
+{% endblock content %}
